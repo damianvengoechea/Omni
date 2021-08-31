@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="find a product" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-31T04:26:26" hostname="DESKTOP-58EKR7N" time="80.432">
+  <properties/>
+  <testcase name="Search a product Adidas" classname="find a product" time="80.432"/>
+  <system-out><![CDATA[?[92m|-- Given that user wants search zapatos adidas in Amazon?[0m
+?[92m|---- Usersearch open browser?[0m
+?[92m|------ userSearch opens the Home page?[0m
+?[92m|---- Usersearch searchproduct?[0m
+?[92m|------ userSearch clicks on Bar Search product?[0m
+?[92m|------ userSearch enters 'zapatos' into Bar Search product?[0m
+?[92m|------ userSearch clicks on Button Search product?[0m
+?[92m|------ userSearch clicks on Button Search product?[0m
+?[92m|-- When you find the shoes and sort them?[0m
+?[92m|---- Usersearch order by products?[0m
+?[92m|------ userSearch clicks on Select list order by?[0m
+?[92m|------ userSearch clicks on Order list product?[0m
+?[92m|-- And prints in descending order?[0m
+?[92m|---- Usersearch print results?[0m
+?[92m|------ userSearch clicks on Order list product?[0m
+?[92m|------ userSearch clicks on Back to results?[0m
+?[92m|------ userSearch clicks on Order list product?[0m
+?[92m|------ userSearch clicks on Back to results?[0m
+?[92m|------ userSearch clicks on Order list product?[0m
+?[92m|------ userSearch clicks on Back to results?[0m
+?[92m|------ userSearch clicks on Order list product?[0m
+?[92m|------ userSearch clicks on Back to results?[0m
+?[92m|------ userSearch clicks on Order list product?[0m
+?[92m|------ userSearch clicks on Back to results?[0m
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///D:/Automatizacion/PruebaOMNI/src/test/resources/features/search.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Search a product Adidas(find-a-product;search-a-product-adidas)
+--------------------------------------------------------------------------------
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Using automatically driver download
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 92.0.4515.107 (resolved driver for Chrome 92)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Damian Vengoechea\.cache\selenium\chromedriver\win32\92.0.4515.107\chromedriver.exe
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.driver: src/test/resources/drivers/..., chrome.switches: --lang=es,--disable-popup-b..., driver: chrome, goog:chromeOptions: {args: [--lang=es, --disable-popup-blocking, --disable-download-notifica..., --start-maximized, --test-type, --ignore-certificate-errors, --allow-running-insecure-co..., --disable-translate, --always-authorize-plugins, --disable-extensions], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., timeouts.implicitlywait: 10000, wait.for.timeout: 10000}
+Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 25186
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+ago 30, 2021 11:26:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+[Test worker] INFO List - +++ Esta es la lista ordenada descendentemente +++
+[Test worker] INFO List - +++ [] +++
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Search a product Adidas
+----------------------------------------------------------------------?[0m
+]]></system-err>
+</testsuite>

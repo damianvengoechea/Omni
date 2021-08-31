@@ -1,0 +1,66 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven {
+        url "https://plugins.gradle.org/m2"
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2"
+        }
+    }
+    ext {
+        serenityCoreVersion = "2.5.7"
+        serenityCucumberVersion = "2.5.7"
+        junitVersion = "4.13.2"
+        assertJVersion = '3.20.2'
+        slf4jVersion = '1.7.32'
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:${serenityCoreVersion}")
+        classpath("net.serenity-bdd:serenity-single-page-report:${serenityCoreVersion}")
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'ISO-8859-1'
+}
+test {
+    systemProperty "file.encoding", "ISO-8859-1"
+}
+
+dependencies {
+    implementation "org.slf4j:slf4j-simple:${slf4jVersion}"
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-junit:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber6:${serenityCucumberVersion}"
+    testImplementation "junit:junit:${junitVersion}"
+    implementation "org.assertj:assertj-core:${assertJVersion}"
+    implementation group: 'org.apache.maven.plugins', name: 'maven-surefire-plugin', version: '3.0.0-M5'
+}
+
+serenity {
+    reports = ["single-page-html"]
+}
+
+test {
+    systemProperty 'tags', System.getProperty('tags', '')
+    enableAssertions = true
+    systemProperty 'environment', System.getProperty('environment', '')
+}
+gradle.startParameter.continueOnFailure = true
+test.finalizedBy(aggregate)
