@@ -30,20 +30,20 @@ public class PrintResults implements Task {
 
             );
             if (ItemDetail.LBL_PRICE.resolveFor(actor).isPresent()){
-                /** String priceTotal = ItemDetail.PRICE.resolveFor(actor).getText();
+                String priceTotal = ItemDetail.PRICE.resolveFor(actor).getText();
                 String[] priceReal = priceTotal.split("-");
                 String price = priceReal[0];
-                lstPrices.add(price);*/
-                String nameArticle = ItemDetail.TITLE_ARTICLE.resolveFor(actor).getText();
-                lstNameArticles.add(nameArticle);
+                lstPrices.add(price);
+               /* String nameArticle = ItemDetail.TITLE_ARTICLE.resolveFor(actor).getText();
+                lstNameArticles.add(nameArticle);*/
             }else {
-                /** actor.attemptsTo(Click.on(ItemDetail.SELECT_COLOUR));
+                actor.attemptsTo(Click.on(ItemDetail.SELECT_COLOUR));
                 String priceTotal = ItemDetail.PRICE.resolveFor(actor).getText();
                 String[] priceReal= priceTotal.split("-");
                 String price = priceReal[0];
-                lstPrices.add(price);*/
-                String nameArticle = ItemDetail.TITLE_ARTICLE.resolveFor(actor).getText();
-                lstNameArticles.add(nameArticle);
+                lstPrices.add(price);
+                /*String nameArticle = ItemDetail.TITLE_ARTICLE.resolveFor(actor).getText();
+                lstNameArticles.add(nameArticle);*/
             }
 
             actor.attemptsTo(Click.on(ItemDetail.BACK_RESULTS));
