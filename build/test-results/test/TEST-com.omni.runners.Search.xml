@@ -4,7 +4,7 @@
   <system-out><![CDATA[
 1 Scenarios (?[32m1 passed?[0m)
 3 Steps (?[32m3 passed?[0m)
-1m20,645s
+0m47,277s
 
 
 ]]></system-out>
@@ -26,8 +26,8 @@
 -------------------------------------------------------------------------------------
 ?[0m
 [Test worker] INFO  - Test Suite Started: find a product
-[pool-1-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.json.JSONTestOutcomeReporter@32ba170d: Generating report for test outcome: find a product:Search a product Adidas
-[pool-2-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@6cce964e: Generating report for test outcome: find a product:Search a product Adidas
+[pool-1-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.json.JSONTestOutcomeReporter@2880a66b: Generating report for test outcome: find a product:Search a product Adidas
+[pool-2-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@60e8eec3: Generating report for test outcome: find a product:Search a product Adidas
 [pool-2-thread-1] INFO serenity.reporting - 
 --------------------------------------
 | TEST NAME:   ?[1mSearch a product Adidas?[0m
